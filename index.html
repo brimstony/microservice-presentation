@@ -147,6 +147,66 @@
 						<li>etc...</li>
 					</ul>
 				</section>
+				<section>
+					<section>
+						<h3>Making it work: Containers</h3>
+						<ul>
+							<li>A container image is a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, and settings.</li>
+							<li><b>Docker</b> is the de facto leader in this space.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Making it work: Containers</h3>
+						<p>Containers vs Virtual Machines</p>
+						<p><img data-src="images/container.png"></p>
+					</section>
+					<section>
+						<h3>Making it work: Containers</h3>
+						<p>Example Dockerfile</p>
+						<pre><code class="hljs" data-trim contenteditable>
+						FROM oracle/serverjre:8
+						ADD target/jms-service-1.0.0-SNAPSHOT.jar app.jar
+						ENTRYPOINT ["java","-jar","/app.jar"]
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Making it work: Container Management</h3>
+						<p>Needed to:</p>
+						<ul>
+							<li>Deploy containerized applications</li>
+							<li>Scale containers on the fly</li>
+							<li>Rolling updates to containerized applications</li>
+							<li>Monitor container health</li>
+							<li>etc...</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Making it work: Container Management</h3>
+						<p>Kubernetes</p>
+						<ul>
+							<li>Easily the leader in this space</li>
+							<li>Started by Google in 2014</li>
+							<li>Embraced by AWS, Azure, Oracle Cloud, etc...</li>
+						</ul>
+					</section>
+				</section>
+				<section style="text-align: left;">
+					<h3>Making it work: Netflix OSS tools</h3>
+					<p class="fragment">Eureka - Service Discovery</p>
+					<p class="fragment">Ribbon - Client-side load balancing</p>
+					<p class="fragment">Zuul - Edge Services (dynamic routing, security, etc.)</p>
+					<p class="fragment">Hystrix - Fault Tolerance/Circuit Breaker</p>
+					<p class="fragment">Spring Cloud Sleuth, Zipkin - Service-Level Monitoring</p>
+				</section>
+				<section>
+					<h3>Closing thoughts</h3>
+					<p class="fragment">A microservice architecture is...</p>
+					<p class="fragment">... a great way to build scalable cloud-based applications</p>
+					<p class="fragment">... a subset of a Service Oriented Architecture (SOA)</p>
+					<p class="fragment">... managed similarly to our Big Data cloud presence</p>
+				</section>
 			</div>
 		</div>
 
